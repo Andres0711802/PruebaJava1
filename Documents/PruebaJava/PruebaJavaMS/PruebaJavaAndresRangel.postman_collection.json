@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "dfae94d0-a8d1-4e5c-a462-d77eca062ca5",
+		"name": "PruebaJavaAndresRangel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BuscarActivos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/prueba-java/ms/buscar?tipo=Maquinaria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"prueba-java",
+						"ms",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "22/09/22",
+							"disabled": true
+						},
+						{
+							"key": "serial",
+							"value": "1234",
+							"disabled": true
+						},
+						{
+							"key": "tipo",
+							"value": "Maquinaria"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearActivos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"Bien 21\",\r\n        \"descripcion\": \"Es el 21Abo Bien\",\r\n        \"serial\": \"222\",\r\n        \"numInventario\": \"23\",\r\n        \"peso\": 11,\r\n        \"alto\": 11,\r\n        \"ancho\": 11,\r\n        \"largo\": 11,\r\n        \"valorCompra\": 122000,\r\n        \"fechaCompra\": \"2022-09-22\",\r\n        \"tipo\": \"Maquinaria\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/prueba-java/ms/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"prueba-java",
+						"ms",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditarActivos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\":1,\r\n        \"nombre\": \"num1\",\r\n        \"descripcion\": \"num1 Bien\",\r\n        \"serial\": \"333\",\r\n        \"numInventario\": \"23\",\r\n        \"peso\": 11,\r\n        \"alto\": 11,\r\n        \"ancho\": 11,\r\n        \"largo\": 11,\r\n        \"valorCompra\": 122000,\r\n        \"fechaCompra\": \"2022-09-22\",\r\n        \"tipo\": \"Maqeeuinaria\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1/prueba-java/ms/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"prueba-java",
+						"ms",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
